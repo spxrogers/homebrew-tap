@@ -13,10 +13,11 @@ brew install agentsync
 
 ## How this tap is maintained
 
-`Formula/agentsync.rb` is **generated** and updated automatically by
+`Casks/agentsync.rb` is **generated** and updated automatically by
 [GoReleaser](https://goreleaser.com) on every tagged release of
-[spxrogers/agentsync](https://github.com/spxrogers/agentsync). Do not edit the
-formula by hand — it is overwritten on the next release.
+[spxrogers/agentsync](https://github.com/spxrogers/agentsync). agentsync ships
+as a Homebrew **cask** (a prebuilt binary), so this tap targets macOS. Do not
+edit the cask by hand — it is overwritten on the next release.
 
 ## License
 
