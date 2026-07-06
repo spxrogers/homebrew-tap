@@ -15,6 +15,7 @@ brew install <formula-or-cask>
 | Project | Type | Install | Description |
 | --- | --- | --- | --- |
 | [agentsync](https://github.com/spxrogers/agentsync) | Cask | `brew install agentsync` | Centrally manage AI coding-agent configurations (Claude Code, OpenCode, Codex, and more) from one canonical, committable source. |
+| [oura-toolkit](https://github.com/spxrogers/oura-toolkit) | Formula | `brew install oura-toolkit` | CLI and STDIO MCP server for the Oura Ring API v2 (auth setup/login, data commands, mcp). Installs the `oura` binary. |
 
 ## How this tap is maintained
 
