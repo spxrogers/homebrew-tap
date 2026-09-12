@@ -1,25 +1,25 @@
 class OuraToolkit < Formula
   desc "CLI and STDIO MCP server for the Oura Ring API v2 (auth setup/login, data commands, mcp)."
   homepage "https://github.com/spxrogers/oura-toolkit"
-  version "0.3.0"
+  version "0.4.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/spxrogers/oura-toolkit/releases/download/v0.3.0/oura-toolkit-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "6c99d1211d56776db4ebbe0b0df7b9114e615730470d532a01456eb20b31af07"
+      url "https://github.com/spxrogers/oura-toolkit/releases/download/v0.4.0/oura-toolkit-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "a0fc5364e970e2921875d0b95ac595991633b0ae79b314af4a5c8dbf5d23bc72"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/spxrogers/oura-toolkit/releases/download/v0.3.0/oura-toolkit-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "6f564ecd9ddf04e318a63277afaf3e25e05978bfa4ed7388e0b14fdb6ea4b99b"
+      url "https://github.com/spxrogers/oura-toolkit/releases/download/v0.4.0/oura-toolkit-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "4b8503774520b5c669e5c7f7be8849d5472b13e7b1258a2164d07dd12641de94"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/spxrogers/oura-toolkit/releases/download/v0.3.0/oura-toolkit-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "3e1eecdc5599364da7ef3e9a8edf8535c147608751beec895fd5b51f595d9c70"
+      url "https://github.com/spxrogers/oura-toolkit/releases/download/v0.4.0/oura-toolkit-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "4c42da93a88c0780417d6f89a52e635aaa92f27e6b0758245510df08876c6414"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/spxrogers/oura-toolkit/releases/download/v0.3.0/oura-toolkit-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "82b201180a58b8f800ed9181b0ea71f14c7786bb35b1f5e2af682eb1785a4f97"
+      url "https://github.com/spxrogers/oura-toolkit/releases/download/v0.4.0/oura-toolkit-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "b6edbb57a4b0fdc92f9c94963f1f9c82b857d9c37d7fbe31ae098eb75d99d301"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class OuraToolkit < Formula
   end
 
   def install
-    bin.install "oura" if OS.mac? && Hardware::CPU.arm?
-    bin.install "oura" if OS.mac? && Hardware::CPU.intel?
-    bin.install "oura" if OS.linux? && Hardware::CPU.arm?
-    bin.install "oura" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "oura"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "oura"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "oura"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "oura"
+    end
 
     install_binary_aliases!
 
