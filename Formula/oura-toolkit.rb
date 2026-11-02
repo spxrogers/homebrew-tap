@@ -1,25 +1,25 @@
 class OuraToolkit < Formula
   desc "CLI and STDIO MCP server for the Oura Ring API v2 (auth setup/login, data commands, mcp)."
   homepage "https://github.com/spxrogers/oura-toolkit"
-  version "0.4.0"
+  version "0.5.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/spxrogers/oura-toolkit/releases/download/v0.4.0/oura-toolkit-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "a0fc5364e970e2921875d0b95ac595991633b0ae79b314af4a5c8dbf5d23bc72"
+      url "https://github.com/spxrogers/oura-toolkit/releases/download/v0.5.0/oura-toolkit-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "ed3884d44dbc99e39fb1f09cbf33245fcecdeea2c5d7020eaa5aeb31da976e1d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/spxrogers/oura-toolkit/releases/download/v0.4.0/oura-toolkit-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "4b8503774520b5c669e5c7f7be8849d5472b13e7b1258a2164d07dd12641de94"
+      url "https://github.com/spxrogers/oura-toolkit/releases/download/v0.5.0/oura-toolkit-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "0d02776d47ad00202e864f45420ff4ecfa68e8a9e473f877e59c2a7c89529267"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/spxrogers/oura-toolkit/releases/download/v0.4.0/oura-toolkit-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "4c42da93a88c0780417d6f89a52e635aaa92f27e6b0758245510df08876c6414"
+      url "https://github.com/spxrogers/oura-toolkit/releases/download/v0.5.0/oura-toolkit-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "67eee740e6980fd5b7276943a28286250a15b90b7eaa5bdcca460850553f86eb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/spxrogers/oura-toolkit/releases/download/v0.4.0/oura-toolkit-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "b6edbb57a4b0fdc92f9c94963f1f9c82b857d9c37d7fbe31ae098eb75d99d301"
+      url "https://github.com/spxrogers/oura-toolkit/releases/download/v0.5.0/oura-toolkit-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "5e9fb89f0fa73e0e95efa42e266dfe727f221a90e5eeecc5770eb7e2c4b6aaf8"
     end
   end
   license "MIT"
